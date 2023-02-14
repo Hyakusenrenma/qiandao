@@ -1,7 +1,7 @@
 {
   "name": "qiandao",
   "version": "1.0.0",
-  "description": "qiandao-自动签到框架",
+  "description": "qiandao-自动定时框架",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

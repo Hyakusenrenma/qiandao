@@ -226,7 +226,7 @@ define (require, exports, module) ->
           btn.button('reset')
         , (res) ->
           result.html(
-            '<h1 class="alert alert-danger text-center">签到失败</h1><div class="well"></div>'
+            '<h1 class="alert alert-danger text-center">定时失败</h1><div class="well"></div>'
             ).show().find('div').text(res.data)
           btn.button('reset')
         )

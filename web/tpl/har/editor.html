@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}编辑签到{% endblock %}
+{% block title %}编辑定时{% endblock %}
 
 {% block head %}
 {{ super() }}
@@ -24,7 +24,7 @@
   <div class="row" ng-controller="EntryList">
     <div class="col-md-3" id="editor-switch">
       <a class="h1-index" href="/">
-        <h1 class="text-center">签到<sup>{{ version }}</sup></h1>
+        <h1 class="text-center">定时</h1>
       </a>
 {% raw %}
       
@@ -90,7 +90,7 @@
     <div class="col-md-9" id="entries">
       <div ng-switch="(har.log.entries | filter: {checked: true}).length">
         <div class="alert alert-info" role="alert" ng-switch-when="0">
-          请分析定位 <strong>签到</strong> 请求，在请求前打勾，如果推荐的请求中没有，请在右侧筛选
+          请分析定位 <strong>定时</strong> 请求，在请求前打勾，如果推荐的请求中没有，请在右侧筛选
         </div>
         <div class="alert alert-info" role="alert" ng-switch-when="1">
           您可以再次点击
@@ -273,7 +273,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">上传HAR</h4>
-          <a href="https://www.quchao.net/QianDaoEXP.html" id="har-guide" class="btn btn-default" target="_blank">使用帮助</a>
+<!--          <a href="https://www.quchao.net/QianDaoEXP.html" id="har-guide" class="btn btn-default" target="_blank">使用帮助</a>-->
         </div>
         <div class="modal-body">
           <div class="alert alert-danger" role="alert" style="display: none;">
