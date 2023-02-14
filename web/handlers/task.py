@@ -232,7 +232,7 @@ class TaskRunHandler(BaseHandler):
             logtmp = u"{0} \\r\\n日志：{1}".format(t, logtmp)
 
             await self.db.tpl.incr_success(tpl['id'],sql_session=sql_session)
-            await self.finish('<h1 class="alert alert-success text-center">定时成功</h1><div class="showbut well autowrap" id="errmsg"><pre>%s</pre><button class="btn hljs-button" data-clipboard-target="#errmsg" >复制</button></div>' % logtmp.replace('\\r\\n', '<br>'))
+            await self.finish('<h1 class="alert alert-success text-center">发送成功</h1><div class="showbut well autowrap" id="errmsg"><pre>%s</pre><button class="btn hljs-button" data-clipboard-target="#errmsg" >复制</button></div>' % logtmp.replace('\\r\\n', '<br>'))
             
             await pushertool.pusher(user['id'], pushsw, 0x8, title, logtmp)
             logDay = int((await self.db.site.get(1, fields=('logDay',),sql_session=sql_session))['logDay'])
